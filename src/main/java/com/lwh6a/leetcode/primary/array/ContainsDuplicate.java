@@ -5,7 +5,7 @@ import java.util.HashSet;
 /**
  * 存在重复元素
  *
- * @author <a href="mailto:liuwenhao@fenxiangbuy.com">刘文豪</a>
+ * @author lwh6a
  * @since 2021/5/12
  */
 

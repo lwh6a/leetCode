@@ -3,7 +3,7 @@ package com.lwh6a.leetcode.primary.array;
 /**
  * 加一
  *
- * @author <a href="mailto:liuwenhao@fenxiangbuy.com">刘文豪</a>
+ * @author lwh6a
  * @since 2021/5/12
  */
 
