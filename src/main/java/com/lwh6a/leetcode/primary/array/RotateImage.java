@@ -33,7 +33,7 @@ public class RotateImage {
             matrix[i] = matrix[len - i -1];
             matrix[len - i -1] = tmp;
         }
-        // 对角线交换
+        // 对角线交换，正对角线，如果是斜对角线则需要用length减去i和j，并且交换列和行的索引值
         for (int i = 0; i < len; i++) {
             for (int j = i + 1; j < len; j++) {
                 int tmp = matrix[i][j];
