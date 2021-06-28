@@ -56,7 +56,7 @@ public class MergeTwoLists {
             return l1 ==null? l2:l1;
         }
         ListNode f = l1.val < l2.val? l1: l2;
-        f.next = mergeTwoLists3(f, f == l1?l2:l1);
+        f.next = mergeTwoLists3(f.next, f == l1?l2:l1);
         return f;
     }
 }
