@@ -16,7 +16,7 @@ public class Trie {
         this.root = root;
     }
 
-    public void insert(String word){
+    public void insert(String word) {
         TrieNode ws = root;
 
         for (int i = 0; i < word.length(); i++) {
@@ -29,20 +29,20 @@ public class Trie {
         ws.isWord = true;
     }
 
-    public boolean search(String word){
+    public boolean search(String word) {
         TrieNode ws = root;
 
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             if (ws.childrens[c - 'a'] == null) {
-               return false;
+                return false;
             }
             ws = root.childrens[c - 'a'];
         }
         return ws.isWord;
     }
 
-    public boolean startWith(String prefix){
+    public boolean startWith(String prefix) {
         TrieNode ws = root;
 
         for (int i = 0; i < prefix.length(); i++) {

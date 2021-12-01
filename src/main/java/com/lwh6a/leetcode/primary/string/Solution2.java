@@ -21,14 +21,14 @@ public class Solution2 {
                 if (i != head) {
                     nums[i] = 0;
                 }
-                head ++;
+                head++;
             }
 
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,0,1};
+        int[] arr = {1, 0, 1};
         moveZeroes(arr);
         System.out.println(Arrays.toString(arr));
     }

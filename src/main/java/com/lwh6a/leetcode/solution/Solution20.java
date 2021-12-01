@@ -14,20 +14,20 @@ public class Solution20 {
     private Stack in = new Stack();
     private Stack out = new Stack();
 
-    public <T> void push(T data){
+    public <T> void push(T data) {
         in.push(data);
     }
 
-    public <T> T pop(){
+    public <T> T pop() {
         if (out.isEmpty()) {
-         while (!in.isEmpty()){
-             out.push(in.pop());
-         }
+            while (!in.isEmpty()) {
+                out.push(in.pop());
+            }
         }
-        return (T)out.pop();
+        return (T) out.pop();
     }
 
-    public void peek(){
+    public void peek() {
 
     }
 }

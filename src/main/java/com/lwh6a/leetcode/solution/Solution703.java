@@ -22,10 +22,10 @@ public class Solution703 {
         }
     }
 
-    public int add(int n){
+    public int add(int n) {
         if (q.size() < k) {
             q.add(n);
-        }else if (q.peek() < n) {
+        } else if (q.peek() < n) {
             q.poll();
             q.offer(n);
         }

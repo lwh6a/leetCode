@@ -18,7 +18,7 @@ public class IsPalindrome {
         while (curr != null) {
             stack.push(curr);
             curr = curr.next;
-            len ++;
+            len++;
         }
 
         while (len >= 0) {
@@ -36,7 +36,7 @@ public class IsPalindrome {
         // 找到中点
         ListNode f = head;
         ListNode s = head;
-        while (f != null && f.next != null){
+        while (f != null && f.next != null) {
             f = f.next.next;
             s = s.next;
         }
@@ -47,7 +47,7 @@ public class IsPalindrome {
         // 反转后半段
         ListNode revers = revers(s);
         // 比较
-        while (f != null){
+        while (f != null) {
             if (f.val != revers.val) {
                 return false;
             }
@@ -57,9 +57,9 @@ public class IsPalindrome {
         return true;
     }
 
-    private ListNode revers(ListNode head){
+    private ListNode revers(ListNode head) {
         ListNode pre = null;
-        while (head != null){
+        while (head != null) {
             ListNode next = head.next;
             head.next = pre;
             pre = head;
@@ -68,7 +68,7 @@ public class IsPalindrome {
         return pre;
     }
 
-    private void reversedPrint(ListNode head){
+    private void reversedPrint(ListNode head) {
         if (head == null) {
             return;
         }
@@ -78,11 +78,13 @@ public class IsPalindrome {
 
     // 递归
     ListNode tmp;
+
     public boolean isPalindrome3(ListNode head) {
         tmp = head;
         return check(head);
     }
-    public boolean check(ListNode head){
+
+    public boolean check(ListNode head) {
         if (head == null) {
             return true;
         }

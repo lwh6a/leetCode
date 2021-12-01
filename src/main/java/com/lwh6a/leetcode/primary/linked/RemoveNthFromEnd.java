@@ -12,9 +12,9 @@ public class RemoveNthFromEnd {
     public static RListNode removeNthFromEnd(RListNode head, int n) {
         int s = 0;
         RListNode cur = head;
-        while (cur != null){
+        while (cur != null) {
             cur = cur.next;
-            s ++;
+            s++;
         }
 
         int i = s - n;
@@ -39,7 +39,7 @@ public class RemoveNthFromEnd {
         if (r == null) {
             return head.next;
         }
-        while (r != null){
+        while (r != null) {
             r = r.next;
             l = l.next;
         }
@@ -57,7 +57,7 @@ public class RemoveNthFromEnd {
         return head;
     }
 
-    private static int len(RListNode r, int n){
+    private static int len(RListNode r, int n) {
         if (r == null) {
             return 0;
         }

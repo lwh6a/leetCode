@@ -41,7 +41,7 @@ public class Rotate {
         int j = 0;
         for (int i = nums.length - k; i < nums.length; i++) {
             right[j] = nums[i];
-            j ++;
+            j++;
         }
 
         for (int i = nums.length - k - 1; i >= 0; i--) {
@@ -62,21 +62,21 @@ public class Rotate {
             right[i] = nums[i];
         }
         for (int i = 0; i < len; i++) {
-            nums[(i + k)%len] = right[i];
+            nums[(i + k) % len] = right[i];
         }
 
     }
 
     public static void rotate4(int[] nums, int k) {
         int len = nums.length;
-        reverse(nums, 0, len -1);
+        reverse(nums, 0, len - 1);
         reverse(nums, 0, k - 1);
         reverse(nums, k, len - 1);
 
     }
 
-    private static void reverse(int[] nums, int start, int end){
-        while (start < end){
+    private static void reverse(int[] nums, int start, int end) {
+        while (start < end) {
             int tem = nums[start];
             nums[start++] = nums[end];
             nums[end--] = tem;
@@ -93,10 +93,10 @@ public class Rotate {
             if (booleans[index]) {
                 //如果访问过，再次访问的话，会出现原地打转的现象，
                 //不能再访问当前元素了，我们直接从他的下一个元素开始
-                index = (index + 1)%len;
+                index = (index + 1) % len;
                 init = nums[0];
-                i --;
-            }else {
+                i--;
+            } else {
                 //把当前值保存在下一个位置，保存之前要把下一个位置的
                 //值给记录下来
                 booleans[index] = true;
@@ -110,7 +110,7 @@ public class Rotate {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
         rotate1(arr, 2);
     }
 }

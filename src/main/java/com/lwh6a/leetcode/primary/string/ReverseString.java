@@ -13,35 +13,35 @@ public class ReverseString {
 
     public void reverseString(char[] s) {
         int len = s.length;
-        for (int i = 0; i < len/2; i++) {
-            char tmp = s[len - i -1];
-            s[len - i -1] = s[i];
+        for (int i = 0; i < len / 2; i++) {
+            char tmp = s[len - i - 1];
+            s[len - i - 1] = s[i];
             s[i] = tmp;
         }
     }
 
     public void reverseString2(char[] s) {
-       int left = 0;
-       int right = s.length - 1;
+        int left = 0;
+        int right = s.length - 1;
 
-       while (left < right){
+        while (left < right) {
             swap(s, left++, right--);
-       }
+        }
     }
 
-    private void swap(char[] arr, int i, int j){
-       // 第一种交换
+    private void swap(char[] arr, int i, int j) {
+        // 第一种交换
         char tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
         // 第二种交换
-        arr[i] = (char)(arr[i] + arr[j]);
-        arr[j] = (char)(arr[i] - arr[j]);
-        arr[i] = (char)(arr[i] - arr[j]);
+        arr[i] = (char) (arr[i] + arr[j]);
+        arr[j] = (char) (arr[i] - arr[j]);
+        arr[i] = (char) (arr[i] - arr[j]);
         // 第三种交换
-        arr[i] = (char)(arr[i] - arr[j]);
-        arr[j] = (char)(arr[i] + arr[j]);
-        arr[i] = (char)(arr[j] + arr[i]);
+        arr[i] = (char) (arr[i] - arr[j]);
+        arr[j] = (char) (arr[i] + arr[j]);
+        arr[i] = (char) (arr[j] + arr[i]);
         // 第四种交换,^异或操作有传递性
         arr[i] ^= arr[j];
         arr[j] ^= arr[i];
@@ -55,7 +55,8 @@ public class ReverseString {
         }
         reverseHelper(s, 0, s.length - 1);
     }
-    private void reverseHelper(char[] arr, int l, int r){
+
+    private void reverseHelper(char[] arr, int l, int r) {
         if (l >= r) {
             return;
         }
@@ -63,7 +64,7 @@ public class ReverseString {
         swapHelper(arr, ++l, --r);
     }
 
-    private void swapHelper(char[] arr, int i, int j){
+    private void swapHelper(char[] arr, int i, int j) {
         char tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;

@@ -20,7 +20,7 @@ public class ReverseList {
         return node.next;
     }
 
-    private static void rs(RsListNode base, RsListNode curr){
+    private static void rs(RsListNode base, RsListNode curr) {
         if (curr.next == null) {
             base.next = curr;
             return;
@@ -35,7 +35,7 @@ public class ReverseList {
     public static RsListNode reverseList2(RsListNode head) {
         Stack<RsListNode> rsListNodes = new Stack<>();
         RsListNode curr = head;
-        while (curr != null){
+        while (curr != null) {
             rsListNodes.push(curr);
             curr = curr.next;
         }
@@ -44,7 +44,7 @@ public class ReverseList {
         }
         RsListNode node = rsListNodes.pop();
         RsListNode next = node;
-        while (!rsListNodes.empty()){
+        while (!rsListNodes.empty()) {
             RsListNode pop = rsListNodes.pop();
             next.next = pop;
             next = pop;
@@ -56,7 +56,7 @@ public class ReverseList {
     // 双链表
     public static RsListNode reverseList3(RsListNode head) {
         RsListNode node = null;
-        while (head != null){
+        while (head != null) {
             // 获取下个节点
             RsListNode next = head.next;
             // 新链表插入头节点
@@ -78,7 +78,16 @@ public class ReverseList {
 class RsListNode {
     int val;
     RsListNode next;
-    RsListNode() {}
-    RsListNode(int val) { this.val = val; }
-    RsListNode(int val, RsListNode next) { this.val = val; this.next = next; }
- }
+
+    RsListNode() {
+    }
+
+    RsListNode(int val) {
+        this.val = val;
+    }
+
+    RsListNode(int val, RsListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}

@@ -14,9 +14,9 @@ public class PlusOne {
         for (int i = digits.length - 1; i >= 0; i--) {
             if (digits[i] != 9) {
                 // 只加一
-                digits[i] ++;
+                digits[i]++;
                 return digits;
-            }else {
+            } else {
                 digits[i] = 0;
             }
         }

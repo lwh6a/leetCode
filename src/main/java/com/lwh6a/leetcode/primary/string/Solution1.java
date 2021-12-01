@@ -15,7 +15,7 @@ public class Solution1 {
         int len = nums.length;
         for (int i = 1; i < len; i++) {
             if (nums[i] != nums[res]) {
-                res ++;
+                res++;
                 nums[res] = nums[i];
             }
         }
@@ -24,7 +24,7 @@ public class Solution1 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
 
         // nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
         int len = removeDuplicates(nums);

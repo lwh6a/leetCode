@@ -24,7 +24,7 @@ public class Merge {
             int[] curr = intervals[i];
             if (arr[1] >= curr[0]) {
                 arr[1] = Math.max(curr[1], arr[1]);
-            }else {
+            } else {
                 res[s++] = arr;
                 arr = curr;
             }
@@ -36,10 +36,10 @@ public class Merge {
     public static void main(String[] args) {
         // [[1,3],[2,6],[8,10],[15,18]]
         int[][] arr = new int[4][2];
-        arr[0] = new int[]{1,3};
-        arr[1] = new int[]{2,6};
-        arr[2] = new int[]{8,10};
-        arr[3] = new int[]{15,18};
+        arr[0] = new int[]{1, 3};
+        arr[1] = new int[]{2, 6};
+        arr[2] = new int[]{8, 10};
+        arr[3] = new int[]{15, 18};
         int[][] merge = merge(arr);
         System.out.println(merge);
     }

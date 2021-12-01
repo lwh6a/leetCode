@@ -1,5 +1,7 @@
 package com.lwh6a.leetcode.primary.array;
 
+import org.apache.logging.log4j.util.Strings;
+
 /**
  * 零矩阵
  *
@@ -30,5 +32,30 @@ public class SetZeroes {
                 }
             }
         }
+    }
+
+    public static String makeFancyString(String s) {
+        int len = s.length();
+        if (len <= 2) {
+            return s;
+        }
+        StringBuilder res = new StringBuilder();
+        res.append(s, 0, 2);
+        for (int i = 2; i < len; i++) {
+            char c = s.charAt(i);
+            int resLen = res.length();
+            if (c == res.charAt(resLen - 1) && c == res.charAt(resLen - 2)) {
+                continue;
+            }
+            res.append(c);
+        }
+
+        return res.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "leeetcode";
+        String s1 = makeFancyString(s);
+        System.out.println(s1);
     }
 }

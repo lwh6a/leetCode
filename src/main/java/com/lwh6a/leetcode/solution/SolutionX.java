@@ -18,7 +18,7 @@ public class SolutionX {
 
     public static void myPow(int x, int n) {
         int pow = 1;
-        while (n > 0){
+        while (n > 0) {
             int i = n & 1;
             if ((n & 1) == 1) {
                 pow *= x;
@@ -29,9 +29,9 @@ public class SolutionX {
         System.out.println(pow);
     }
 
-    public static void ad(){
-        int[][] a = {{1, 2, 3},{1, 2, 3},{1, 2, 3}};
-        int[][] b = {{4, 5, 6},{4, 5, 6},{4, 5, 6}};
+    public static void ad() {
+        int[][] a = {{1, 2, 3}, {1, 2, 3}, {1, 2, 3}};
+        int[][] b = {{4, 5, 6}, {4, 5, 6}, {4, 5, 6}};
         int[][] c = new int[3][3];
         int count = 0;
         for (int i = 0; i < 3; i++) {
@@ -39,7 +39,7 @@ public class SolutionX {
                 for (int k = 0; k < 3; k++) {
                     System.out.println(a[i][k] * b[k][j]);
                     c[i][j] += a[i][k] * b[k][j];
-                    count ++;
+                    count++;
                 }
             }
         }

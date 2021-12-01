@@ -19,15 +19,15 @@ public class Intersect {
         ArrayList<Integer> list = new ArrayList<>();
         int l = 0;
         int r = 0;
-        while (l < nums1.length && r < nums2.length){
+        while (l < nums1.length && r < nums2.length) {
             if (nums1[l] < nums2[r]) {
-                l ++;
-            }else if (nums1[l] > nums2[r]) {
-                r ++;
-            }else {
+                l++;
+            } else if (nums1[l] > nums2[r]) {
+                r++;
+            } else {
                 list.add(nums1[l]);
-                l ++;
-                r ++;
+                l++;
+                r++;
             }
         }
         int[] ints = new int[list.size()];

@@ -18,7 +18,7 @@ public class HasCycle {
         // 快慢指针，如果快慢指针相遇则代表有环，不是必须在环的点相遇而是在环上任何点相遇都可以
         ListNode slow = head;
         ListNode fast = head;
-        while (slow != null && fast != null){
+        while (slow != null && fast != null) {
             // 慢指针每次走一步
             slow = slow.next;
             // 快指针每次走两步
@@ -29,10 +29,11 @@ public class HasCycle {
         }
         return false;
     }
+
     // 集合
     public boolean hasCycle2(ListNode head) {
         HashSet<ListNode> set = new HashSet<>();
-        while (head != null){
+        while (head != null) {
             if (set.contains(head)) {
                 return true;
             }
@@ -64,9 +65,9 @@ public class HasCycle {
         return false;
     }
 
-    public ListNode reverseListNode(ListNode head){
+    public ListNode reverseListNode(ListNode head) {
         ListNode newNode = null;
-        while (head != null){
+        while (head != null) {
             ListNode next = head.next;
             head.next = newNode;
             newNode = head;

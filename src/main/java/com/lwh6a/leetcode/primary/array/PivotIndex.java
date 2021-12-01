@@ -23,7 +23,7 @@ public class PivotIndex {
         }
         for (int i = 1; i < nums.length; i++) {
             right -= nums[i];
-            left += nums[i-1];
+            left += nums[i - 1];
             if (left == right) {
                 return i;
             }

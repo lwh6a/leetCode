@@ -9,7 +9,7 @@ package com.lwh6a.leetcode.other;
 
 public class FindNumsAppearOnce {
 
-    public void FindNumsAppearOnce(int[] arr, int[] n1, int[] n2){
+    public void FindNumsAppearOnce(int[] arr, int[] n1, int[] n2) {
 
     }
 }

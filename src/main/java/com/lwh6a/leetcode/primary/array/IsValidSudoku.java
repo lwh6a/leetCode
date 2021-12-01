@@ -21,9 +21,9 @@ public class IsValidSudoku {
                     continue;
                 }
                 int loc = 1 << board[i][j] - '0';
-                int idx = i /3*3 + j/3;
+                int idx = i / 3 * 3 + j / 3;
                 if ((row[i] & loc) > 0
-                    || (col[j] & loc) > 0
+                        || (col[j] & loc) > 0
                         || (cell[idx] & loc) > 0) {
                     return false;
                 }
@@ -40,7 +40,7 @@ public class IsValidSudoku {
         System.out.println('5' - '0');
 
         int i = 2;
-        int x = i /3*3;
+        int x = i / 3 * 3;
         System.out.println(x);
     }
 
@@ -57,7 +57,7 @@ public class IsValidSudoku {
                 }
 
                 int num = board[i][j] - '0' - 1;
-                int idx = i /3*3 + j/3;
+                int idx = i / 3 * 3 + j / 3;
                 if (row[i][num] != 0
                         || col[j][num] != 0
                         || cell[idx][num] != 0) {

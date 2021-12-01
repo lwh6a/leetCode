@@ -24,7 +24,7 @@ public class CountAndSay {
                     res.append(count).append(say);
                     count = 1;
                     say = pre.charAt(j);
-                }else {
+                } else {
                     count++;
                 }
             }

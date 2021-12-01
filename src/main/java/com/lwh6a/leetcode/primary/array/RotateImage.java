@@ -11,8 +11,8 @@ public class RotateImage {
 
     public void rotate(int[][] matrix) {
         int len = matrix.length;
-        for (int i = 0; i < len/2; i++) {
-            for (int j = i; j < len - i -1; j++) {
+        for (int i = 0; i < len / 2; i++) {
+            for (int j = i; j < len - i - 1; j++) {
                 int tmp = matrix[i][j];
                 int row = len - i - 1;
                 int col = len - j - 1;
@@ -28,10 +28,10 @@ public class RotateImage {
     public void rotate2(int[][] matrix) {
         int len = matrix.length;
         // 上下交换
-        for (int i = 0; i < len/2; i++) {
+        for (int i = 0; i < len / 2; i++) {
             int[] tmp = matrix[i];
-            matrix[i] = matrix[len - i -1];
-            matrix[len - i -1] = tmp;
+            matrix[i] = matrix[len - i - 1];
+            matrix[len - i - 1] = tmp;
         }
         // 对角线交换，正对角线，如果是斜对角线则需要用length减去i和j，并且交换列和行的索引值
         for (int i = 0; i < len; i++) {
