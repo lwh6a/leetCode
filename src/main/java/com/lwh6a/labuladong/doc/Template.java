@@ -3,7 +3,7 @@ package com.lwh6a.labuladong.doc;
 /**
  * 算法和数据结构的框架思维
  *
- * @author <a href="mailto:liuwenhao@fenxiangbuy.com">刘文豪</a>
+ * @author lwh6a
  * @since 2021/4/30
  */
 
