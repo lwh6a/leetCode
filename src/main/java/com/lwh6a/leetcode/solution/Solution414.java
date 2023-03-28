@@ -1,4 +1,4 @@
-package com.lwh6a.leetcode.other;
+package com.lwh6a.leetcode.solution;
 
 /**
  * 最大的数
