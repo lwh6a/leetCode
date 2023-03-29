@@ -1,4 +1,4 @@
-package com.lwh6a.leetcode.solution;
+package com.lwh6a.leetcode.sort;
 
 import java.util.Stack;
 
