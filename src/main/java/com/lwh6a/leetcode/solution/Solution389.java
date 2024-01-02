@@ -1,4 +1,4 @@
-package com.lwh6a.leetcode.sort;
+package com.lwh6a.leetcode.solution;
 
 /**
  * 找不同
