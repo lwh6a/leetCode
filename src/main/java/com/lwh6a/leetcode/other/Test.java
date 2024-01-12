@@ -1,5 +1,7 @@
 package com.lwh6a.leetcode.other;
 
+import java.util.ArrayList;
+
 /**
  * @author lwh6a
  * @since 2023/3/28
@@ -22,5 +24,14 @@ public class Test {
         }
         return  0;
 
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 17; i++) {
+
+            list.add(1);
+        }
+        System.out.println(list.size());
     }
 }
