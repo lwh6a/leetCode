@@ -18,16 +18,14 @@ public class Solution703 {
         this.q = new PriorityQueue<Integer>(k);
         this.k = k;
         for (int a : arr) {
-            q.add(a);
+            add(a);
         }
     }
 
-    public int add(int n) {
-        if (q.size() < k) {
-            q.add(n);
-        } else if (q.peek() < n) {
+    public int add(int val) {
+        q.offer(val);
+        if (q.size() > k) {
             q.poll();
-            q.offer(n);
         }
         return q.peek();
     }
