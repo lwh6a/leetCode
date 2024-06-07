@@ -1,7 +1,5 @@
 package com.lwh6a.leetcode.utilPoJo;
 
-import lombok.Data;
-
 /**
  * 链表
  *
@@ -16,7 +14,7 @@ public class ListNode {
     public ListNode() {
     }
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
         next = null;
     }
